@@ -53,7 +53,7 @@ svg.style("cursor","move");
 d3.json("https://github.com/dfield18/test/blob/master/testMay25C.json", function(error, graph) {
 var linkedByIndex = {};
     graph.links.forEach(function(d) {
-	linkedByIndex[d.source + "," + d.target] = true;
+    linkedByIndex[d.source + "," + d.target] = true;
     });
 	function isConnected(a, b) {
         return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
