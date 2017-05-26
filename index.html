@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-
 <meta charset="utf-8">
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <style>
-.link {
-  stroke: #aaa;
+body {
+  overflow:hidden;
+   margin:0;
 }
-.node text {
-stroke:#333;
-cursos:pointer;
-}
-.node circle{
-stroke:#fff;
-stroke-width:3px;
-fill:#555;
+text {
+  font-family: sans-serif;
+  pointer-events: none;
 }
 </style>
 <body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script>
-
 var w = window.innerWidth;
 var h = window.innerHeight;
 var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
@@ -56,7 +50,7 @@ var svg = d3.select("body").append("svg");
 var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom])
 var g = svg.append("g");
 svg.style("cursor","move");
-d3.json("https://github.com/dfield18/test2/blob/master/testMay25C.json", function(error, graph)  {
+d3.json("https://github.com/dfield18/test/blob/master/testMay25C.json", function(error, graph) {
 var linkedByIndex = {};
     graph.links.forEach(function(d) {
 	linkedByIndex[d.source + "," + d.target] = true;
