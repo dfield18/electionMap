@@ -1,18 +1,23 @@
 <!DOCTYPE html>
+
 <meta charset="utf-8">
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <style>
-body {
-  overflow:hidden;
-   margin:0;
+.link {
+  stroke: #aaa;
 }
-text {
-  font-family: sans-serif;
-  pointer-events: none;
+.node text {
+stroke:#333;
+cursos:pointer;
+}
+.node circle{
+stroke:#fff;
+stroke-width:3px;
+fill:#555;
 }
 </style>
 <body>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script>
+
 var w = window.innerWidth;
 var h = window.innerHeight;
 var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
